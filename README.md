@@ -82,11 +82,34 @@ export function FormInputGroupMult({
 ### FormInputText
 
 ```jsx
-
+export function FormInputText({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="text"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormInputText label="Razão Social" htmlId="razao" />
 ```
 
 <hr>
@@ -94,7 +117,30 @@ export function FormInputGroupMult({
 ### FormInputDate
 
 ```jsx
-
+export function FormInputDate({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="date"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
 ```
 
 ```jsx
