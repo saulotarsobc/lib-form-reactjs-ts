@@ -2,46 +2,33 @@ import React from "react";
 
 import "./FormSaulo.scss";
 
-const OptionsExample = [
-  {
-    name: "Option 1",
-    value: 1,
-  },
-  {
-    name: "Option 2",
-    value: 2,
-  },
-  {
-    name: "Option 3",
-    value: 3,
-  },
-];
+const OptionsExample = [{ name: "Option 1", value: 1 }];
 
-type FormSauloTypes = {
-  children: React.ReactNode;
-};
-
-export function FormSaulo({ children }: FormSauloTypes) {
+/* FormSaulo */
+export function FormSaulo({ children }: { children: React.ReactNode }) {
   return <form className="FormSaulo">{children}</form>;
 }
 
-export function FormInputGroupMult({ children }: FormSauloTypes) {
+/* FormInputGroupMult */
+export function FormInputGroupMult({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <div className="input_g_mult">{children}</div>;
 }
 
-/*  */
-type FormTitleTypes = {
-  title?: string;
-};
-export function FormTitle({ title = "no title" }: FormTitleTypes) {
+/* FormTitle */
+export function FormTitle({ title = "no title" }: { title?: string }) {
   return <h1 className="tit">{title}</h1>;
 }
 
-/*  */
-type FormSubtitleTypes = {
+/* FormSubtitle */
+export function FormSubtitle({
+  subtitle = "no subtitle",
+}: {
   subtitle?: string;
-};
-export function FormSubtitle({ subtitle = "no subtitle" }: FormSubtitleTypes) {
+}) {
   return (
     <>
       <hr className="divisor" />
@@ -52,10 +39,12 @@ export function FormSubtitle({ subtitle = "no subtitle" }: FormSubtitleTypes) {
   );
 }
 
+/* FormDivisor */
 export function FormDivisor() {
   return <hr className="divisor" />;
 }
 
+/* FormInputText */
 export function FormInputText({
   label = "no label",
   htmlId,
@@ -81,6 +70,7 @@ export function FormInputText({
   );
 }
 
+/* FormInputDate */
 export function FormInputDate({
   label = "no label",
   htmlId,
@@ -106,6 +96,7 @@ export function FormInputDate({
   );
 }
 
+/* FormInputEmail */
 export function FormInputEmail({
   label = "no label",
   htmlId,
@@ -131,6 +122,7 @@ export function FormInputEmail({
   );
 }
 
+/* FormInputNumber */
 export function FormInputNumber({
   label = "no label",
   htmlId,
@@ -156,6 +148,7 @@ export function FormInputNumber({
   );
 }
 
+/* FormInputTel */
 export function FormInputTel({
   label = "no label",
   htmlId,
@@ -181,6 +174,7 @@ export function FormInputTel({
   );
 }
 
+/* FormBtnSubmit */
 export function FormBtnSubmit({
   value = "no value",
   htmlId = "no id",
@@ -196,6 +190,7 @@ export function FormBtnSubmit({
   );
 }
 
+/* FormInputTextArea */
 export function FormInputTextArea({
   label = "no label",
   htmlId,
@@ -225,6 +220,7 @@ type optionsType = {
   value: number | string;
 };
 
+/* FormSelect */
 export function FormSelect({
   label = "no label",
   htmlId,
