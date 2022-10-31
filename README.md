@@ -144,7 +144,7 @@ export function FormInputDate({
 ```
 
 ```jsx
-
+<FormInputDate label="Nascimento" htmlId="data_nascimento" />
 ```
 
 <hr>
