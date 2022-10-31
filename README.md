@@ -200,11 +200,42 @@ export function FormInputDate({
 ### FormSelect
 
 ```jsx
-
+export function FormSelect({
+  label = "no label",
+  htmlId,
+  options = OptionsExample,
+}: {
+  label?: string;
+  htmlId: string;
+  options?: any;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <select className="data" name={htmlId} id={htmlId}>
+        {options.map((option: optionsType, index: number) => (
+          <option key={index} value={option.value}>
+            {option.name}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormSelect
+    label="Tipo de pessoa"
+    htmlId="tipo_pessoa"
+    options={[
+        { value: "F", name: "Física" },
+        { value: "J", name: "Jurídica" },
+        { value: "E", name: "Estrangeira" },
+    ]}
+/>
 ```
 
 <hr>
