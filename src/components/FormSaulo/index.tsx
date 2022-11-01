@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./FormSaulo.scss";
+import "./index.scss";
 
 const OptionsExample = [{ name: "Option 1", value: 1 }];
 
