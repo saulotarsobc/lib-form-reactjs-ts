@@ -6,7 +6,7 @@ import {
   FormSaulo,
   FormTitle,
   FormSubtitle,
-  FormInputGroupMult,
+  FormInputGroup,
   FormInputText,
   FormInputDate,
   FormInputEmail,
@@ -27,7 +27,7 @@ function Home() {
         <FormSubtitle subtitle="Dados Pessoais" />
         <FormInputText label="Nome" htmlId="nome" required={true} />
         <FormInputText label="Razão Social" htmlId="razao" />
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormSelect
             label="Tipo de pessoa"
             htmlId="tipo_pessoa"
@@ -46,25 +46,25 @@ function Home() {
               { value: "F", name: "Feminino" },
             ]}
           />
-        </FormInputGroupMult>
-        <FormInputGroupMult>
+        </FormInputGroup>
+        <FormInputGroup>
           <FormInputText label="CPF" htmlId="cnpj_cpf" />
           <FormInputNumber label="RG" htmlId="rg" />
-        </FormInputGroupMult>
+        </FormInputGroup>
         <FormInputDate label="Nascimento" htmlId="data_nascimento" />
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormInputTel label="Celular" htmlId="fone_celular" />
           <FormInputTel label="Whatsapp" htmlId="fone_whatsapp" />
-        </FormInputGroupMult>
+        </FormInputGroup>
         <FormInputEmail label="Email" htmlId="email" />
 
         {/* endereco */}
         <FormSubtitle subtitle="Endereço" />
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormInputText label="CEP" htmlId="cep" />
           <FormInputText label="Rua" htmlId="endereco" />
-        </FormInputGroupMult>
-        <FormInputGroupMult>
+        </FormInputGroup>
+        <FormInputGroup>
           <FormInputText label="Bairro" htmlId="bairro" />
           <FormSelect
             label="Cidade"
@@ -77,32 +77,32 @@ function Home() {
               { value: "5572", name: "Icoaraci" },
             ]}
           />
-        </FormInputGroupMult>
-        <FormInputGroupMult>
+        </FormInputGroup>
+        <FormInputGroup>
           <FormInputText label="Estado" htmlId="estado" />
           <FormInputNumber label="Número" htmlId="numero" />
-        </FormInputGroupMult>
+        </FormInputGroup>
         <FormInputText label="Complemento" htmlId="complemento" />
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormInputTextArea label="Referência" htmlId="referencia" rows={3} />
-        </FormInputGroupMult>
+        </FormInputGroup>
 
         {/* plano */}
         <FormSubtitle subtitle="Plano" />
 
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormInputText label="Plano(down/up)" htmlId="plano" />
           <FormInputNumber label="Dia Vencimento" htmlId="dia_vencimento" />
-        </FormInputGroupMult>
+        </FormInputGroup>
 
         {/* vendedor */}
         <FormSubtitle subtitle="Vendedor" />
         {/* passar vendedores via api */}
         <FormSelect label="Vendedor" htmlId="id_responsavel" />
 
-        <FormInputGroupMult>
+        <FormInputGroup>
           <FormInputTextArea label="Obs" htmlId="obs" rows={5} />
-        </FormInputGroupMult>
+        </FormInputGroup>
 
         <FormBtnSubmit value="GRAVAR" htmlId="gravar" />
       </FormSaulo>

@@ -10,7 +10,7 @@ export function FormSaulo({ children }: { children: React.ReactNode }) {
 }
 
 /* FormInputGroupMult */
-export function FormInputGroupMult({
+export function FormInputGroup({
   children,
 }: {
   children: React.ReactNode;

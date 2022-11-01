@@ -59,10 +59,10 @@ export function FormSubtitle({
 
 <hr>
 
-### FormInputGroupMult
+### FormInputGroup
 
 ```jsx
-export function FormInputGroupMult({
+export function FormInputGroup({
   children,
 }: {
   children: React.ReactNode;
@@ -72,9 +72,9 @@ export function FormInputGroupMult({
 ```
 
 ```jsx
-<FormInputGroupMult>
+<FormInputGroup>
     /* html */
-</FormInputGroupMult>
+</FormInputGroup>
 ```
 
 <hr>
