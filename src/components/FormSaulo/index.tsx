@@ -228,7 +228,7 @@ export function FormSelect({
 }: {
   label?: string;
   htmlId: string;
-  options?: any;
+  options?: optionsType[];
 }) {
   return (
     <div className="input_g">

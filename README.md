@@ -152,11 +152,34 @@ export function FormInputDate({
 ### FormInputEmail
 
 ```jsx
-
+export function FormInputEmail({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="email"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormInputEmail label="Email" htmlId="email" />
 ```
 
 <hr>
@@ -164,11 +187,34 @@ export function FormInputDate({
 ### FormInputTel
 
 ```jsx
-
+export function FormInputTel({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="tel"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormInputTel label="Whatsapp" htmlId="fone_whatsapp" />
 ```
 
 <hr>
@@ -176,11 +222,33 @@ export function FormInputDate({
 ### FormInputTextArea
 
 ```jsx
-
+export function FormInputTextArea({
+  label = "no label",
+  htmlId,
+  rows,
+}: {
+  label?: string;
+  htmlId: string;
+  rows?: number;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <textarea
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        rows={rows}
+      ></textarea>
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormInputTextArea label="Referência" htmlId="referencia" rows={3} />
 ```
 
 <hr>
@@ -188,11 +256,34 @@ export function FormInputDate({
 ### FormInputNumber
 
 ```jsx
-
+export function FormInputNumber({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="number"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
 ```
 
 ```jsx
-
+<FormInputNumber label="Número" htmlId="numero" />
 ```
 
 <hr>
@@ -207,7 +298,7 @@ export function FormSelect({
 }: {
   label?: string;
   htmlId: string;
-  options?: any;
+  options?: optionsType[];
 }) {
   return (
     <div className="input_g">
@@ -243,5 +334,22 @@ export function FormSelect({
 ### FormBtnSubmit
 
 ```jsx
+export function FormBtnSubmit({
+  value = "no value",
+  htmlId = "no id",
+}: {
+  value?: string;
+  htmlId?: string;
+}) {
+  return (
+    <div className="input_g">
+      <label htmlFor="gravar"></label>
+      <input type="submit" value={value} id={htmlId} />
+    </div>
+  );
+}
+```
 
+```jsx
+<FormBtnSubmit value="GRAVAR" htmlId="gravar" />
 ```
