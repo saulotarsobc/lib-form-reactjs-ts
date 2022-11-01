@@ -10,11 +10,7 @@ export function FormSaulo({ children }: { children: React.ReactNode }) {
 }
 
 /* FormInputGroupMult */
-export function FormInputGroup({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function FormInputGroup({ children }: { children: React.ReactNode }) {
   return <div className="input_g_mult">{children}</div>;
 }
 
@@ -61,6 +57,31 @@ export function FormInputText({
       </label>
       <input
         type="text"
+        className="data"
+        name={htmlId}
+        id={htmlId}
+        required={required}
+      />
+    </div>
+  );
+}
+
+export function FormInputPass({
+  label = "no label",
+  htmlId,
+  required = false,
+}: {
+  label?: string;
+  htmlId: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="input_g">
+      <label className="info" htmlFor={htmlId}>
+        {label}
+      </label>
+      <input
+        type="password"
         className="data"
         name={htmlId}
         id={htmlId}
@@ -236,9 +257,9 @@ export function FormSelect({
         {label}
       </label>
       <select className="data" name={htmlId} id={htmlId}>
-        {options.map((option: optionsType, index: number) => (
-          <option key={index} value={option.value}>
-            {option.name}
+        {options.map(({ name, value }: optionsType, index: number) => (
+          <option key={index} value={value}>
+            {name}
           </option>
         ))}
       </select>
